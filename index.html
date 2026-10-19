@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Johnny Q | Tech Tools — Excel2Forms, AID y VideoFrases | Herramientas gratis</title>
+    <meta name="description" content="Suite de herramientas gratis: Excel2Forms (autollenado de formularios desde Excel), AID (asistente de ingreso de datos) y VideoFrases (aprende inglés con videos IA). 100% locales y seguras.">
+    <meta name="keywords" content="Excel2Forms, AID, VideoFrases, automatizar formularios, Excel a web, aprender inglés, herramientas gratis, Chrome extension">
+    <meta property="og:title" content="Johnny Q | Tech Tools — Herramientas de productividad gratis">
+    <meta property="og:description" content="Excel2Forms, AID y VideoFrases. Automatiza tareas repetitivas y aprende inglés con herramientas 100% locales.">
+    <meta property="og:url" content="https://johnnytechtools.vercel.app">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Johnny Q | Tech Tools — Herramientas gratis">
+    <meta name="twitter:description" content="Excel2Forms, AID y VideoFrases. Automatiza y aprende con herramientas 100% locales.">
+    <meta name="google-site-verification" content="google4ad121254d2d3672.html" />
+    <link rel="canonical" href="https://johnnytechtools.vercel.app">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Johnny Q | Tech Tools",
+      "url": "https://johnnytechtools.vercel.app",
+      "description": "Suite de herramientas de productividad: Excel2Forms, AID y VideoFrases",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Johnny Q | Tech Tools"
+      },
+      "hasPart": [
+        {
+          "@type": "SoftwareApplication",
+          "name": "Excel2Forms",
+          "applicationCategory": "BrowserApplication",
+          "operatingSystem": "Chrome",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "description": "Automatiza el llenado de formularios web desde Excel. 100% gratis."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "AID — Asistente de Ingreso de Datos",
+          "applicationCategory": "BrowserApplication",
+          "operatingSystem": "Chrome",
+          "description": "Automatiza formularios web desde Excel con 3 modos de llenado. 100% offline."
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "VideoFrases",
+          "applicationCategory": "MultimediaApplication",
+          "operatingSystem": "Web",
+          "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+          "description": "Genera videos para aprender inglés con frases, pronunciación y voz natural."
+        }
+      ]
+    }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <style>
+        [data-i18n]{display:none}
+        [data-i18n].active{display:block}
+        span[data-i18n], a[data-i18n]{display:none}
+        span[data-i18n].active, a[data-i18n].active{display:inline}
+        html{scroll-behavior:smooth}
+        .no-scrollbar::-webkit-scrollbar{display:none}
+        .no-scrollbar{-ms-overflow-style:none;scrollbar-width:none}
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans">
+
+    <!-- LANGUAGE TOGGLE -->
+    <div class="fixed top-4 right-4 z-50">
+        <button id="langToggle" class="bg-white border border-slate-200 shadow-sm rounded-lg px-3 py-1.5 text-sm font-medium hover:bg-slate-50 transition-colors">
+            🌐 <span id="langLabel">EN</span>
+        </button>
+    </div>
+
+    <!-- 1. HERO (marca) -->
+    <header class="max-w-5xl mx-auto px-6 py-16 text-center">
+        <span class="text-blue-600 font-semibold text-sm tracking-wider uppercase" data-i18n="hero_badge" data-es="Suite de Herramientas de Productividad" data-en="Productivity Tools Suite">Suite de Herramientas de Productividad</span>
+        <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mt-2 mb-6">
+            Johnny Q <span class="text-blue-600">|</span> Tech Tools
+        </h1>
+        <p class="text-lg md:text-xl text-slate-600 max-w-2xl mx-auto mb-8">
+            <span data-i18n="hero_p" class="active" data-es="Herramientas web gratis, utilidades de IA y automatizaciones para eliminar tareas repetitivas y multiplicar tu productividad. 100% rápidas, seguras y sin complicaciones." data-en="Free web tools, AI utilities, and automations to eliminate repetitive tasks and multiply your productivity. 100% fast, secure, and hassle-free.">Herramientas web gratis, utilidades de IA y automatizaciones para eliminar tareas repetitivas y multiplicar tu productividad. 100% rápidas, seguras y sin complicaciones.</span>
+        </p>
+        <a href="#tools" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+            <span data-i18n="cta_explore" class="active" data-es="Explorar herramientas" data-en="Explore tools">Explorar herramientas</span>
+        </a>
+    </header>
+
+    <!-- 2. TOOLS GRID -->
+    <section id="tools" class="max-w-5xl mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center mb-4">
+            <span data-i18n="tools_h2" class="active" data-es="Nuestras herramientas" data-en="Our tools">Nuestras herramientas</span>
+        </h2>
+        <p class="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+            <span data-i18n="tools_sub" class="active" data-es="Tres herramientas disponibles y seguimos construyendo. Elige la que necesitas hoy." data-en="Three tools available and we keep building. Pick what you need today.">Tres herramientas disponibles y seguimos construyendo. Elige la que necesitas hoy.</span>
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <!-- Excel2Forms -->
+            <div class="bg-white p-8 rounded-2xl shadow-md border-2 border-blue-500 hover:shadow-lg transition-shadow relative flex flex-col">
+                <span class="absolute -top-3 left-6 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <span data-i18n="tool_active_badge" class="active" data-es="Extensión Chrome" data-en="Chrome Extension">Extensión Chrome</span>
+                </span>
+                <div class="text-3xl mb-3">⚡</div>
+                <h3 class="text-xl font-bold mb-2 text-slate-800">Excel2Forms</h3>
+                <p class="text-slate-600 text-sm mb-6 flex-grow">
+                    <span data-i18n="tool_e2f_desc" class="active" data-es="Rellena y envía formularios web automáticamente desde un archivo Excel o CSV. 100% gratis." data-en="Automatically fill and submit web forms from an Excel or CSV file. 100% free.">Rellena y envía formularios web automáticamente desde un archivo Excel o CSV. 100% gratis.</span>
+                </p>
+                <a href="#excel2forms" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-colors text-center">
+                    <span data-i18n="tool_e2f_more" class="active" data-es="Ver más ↓" data-en="Learn more ↓">Ver más ↓</span>
+                </a>
+                <a href="https://chromewebstore.google.com/detail/excel2forms-web-form-auto/akpoionmboejidpnolfehdjfeopmibla?authuser=4&hl=es-419" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition-colors text-center text-sm">
+                    <span data-i18n="tool_e2f_cta" class="active" data-es="Añadir a Chrome — Gratis" data-en="Add to Chrome — Free">Añadir a Chrome — Gratis</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=5273sAHAIcE" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center justify-center gap-2 w-full bg-white border-2 border-slate-200 hover:border-red-400 text-slate-700 font-semibold py-2.5 rounded-xl transition-colors text-sm">
+                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                    <span data-i18n="tool_e2f_demo" class="active" data-es="Ver Demo" data-en="Watch Demo">Ver Demo</span>
+                </a>
+            </div>
+
+            <!-- AID -->
+            <div class="bg-white p-8 rounded-2xl shadow-md border-2 border-blue-500 hover:shadow-lg transition-shadow relative flex flex-col">
+                <span class="absolute -top-3 left-6 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <span data-i18n="tool_aid_badge" class="active" data-es="Próximo en la tienda" data-en="Coming soon to the store">Próximo en la tienda</span>
+                </span>
+                <div class="text-3xl mb-3">🤖</div>
+                <h3 class="text-xl font-bold mb-2 text-slate-800">AID</h3>
+                <p class="text-slate-600 text-sm mb-6 flex-grow">
+                    <span data-i18n="tool_aid_desc" class="active" data-es="Asistente de Ingreso de Datos. Automatiza formularios web desde Excel con 3 modos de llenado. 100% offline." data-en="Data Entry Assistant. Automate web forms from Excel with 3 fill modes. 100% offline.">Asistente de Ingreso de Datos. Automatiza formularios web desde Excel con 3 modos de llenado. 100% offline.</span>
+                </p>
+                <a href="#aid" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-colors text-center">
+                    <span data-i18n="tool_aid_more" class="active" data-es="Ver más ↓" data-en="Learn more ↓">Ver más ↓</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=OyEkU8XodAc" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center justify-center gap-2 w-full bg-white border-2 border-slate-200 hover:border-red-400 text-slate-700 font-semibold py-2.5 rounded-xl transition-colors text-sm">
+                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                    <span data-i18n="tool_aid_demo" class="active" data-es="Ver Demo" data-en="Watch Demo">Ver Demo</span>
+                </a>
+            </div>
+
+            <!-- Tool: VideoFrases -->
+            <div class="bg-white p-8 rounded-2xl shadow-md border-2 border-blue-500 hover:shadow-lg transition-shadow relative flex flex-col">
+                <span class="absolute -top-3 left-6 bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                    <span data-i18n="tool_vf_badge" class="active" data-es="Herramienta Web" data-en="Web Tool">Herramienta Web</span>
+                </span>
+                <div class="text-3xl mb-3">🎬</div>
+                <h3 class="text-xl font-bold mb-2 text-slate-800">VideoFrases</h3>
+                <p class="text-slate-600 text-sm mb-6 flex-grow">
+                    <span data-i18n="tool_vf_desc" class="active" data-es="Genera videos para aprender inglés con frases, pronunciación y voz natural. Categorías: Dev, Business, Travel, Interview y más." data-en="Generate videos to learn English with phrases, pronunciation, and natural voices. Categories: Dev, Business, Travel, Interview, and more.">Genera videos para aprender inglés con frases, pronunciación y voz natural. Categorías: Dev, Business, Travel, Interview y más.</span>
+                </p>
+                <a href="#videofrases" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-colors text-center">
+                    <span data-i18n="tool_vf_more" class="active" data-es="Ver más ↓" data-en="Learn more ↓">Ver más ↓</span>
+                </a>
+                <a href="https://videofrases.onrender.com/" target="_blank" rel="noopener noreferrer" class="mt-3 block w-full bg-slate-900 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition-colors text-center text-sm">
+                    <span data-i18n="tool_vf_cta" class="active" data-es="Usar VideoFrases" data-en="Use VideoFrases">Usar VideoFrases</span>
+                </a>
+                <a href="https://youtube.com/shorts/1djWN1P7_FE" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center justify-center gap-2 w-full bg-white border-2 border-slate-200 hover:border-red-400 text-slate-700 font-semibold py-2.5 rounded-xl transition-colors text-sm">
+                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                    <span data-i18n="tool_vf_demo" class="active" data-es="Ver Demo" data-en="Watch Demo">Ver Demo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. BENEFICIOS DE MARCA -->
+    <section class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-200">
+        <h2 class="text-3xl font-bold text-center mb-12">
+            <span data-i18n="benefits_h2" class="active" data-es="¿Por qué Johnny Q | Tech Tools?" data-en="Why Johnny Q | Tech Tools?">¿Por qué Johnny Q | Tech Tools?</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100">
+                <div class="text-blue-600 text-2xl mb-3">⚡</div>
+                <h3 class="text-xl font-bold mb-2">
+                    <span data-i18n="b1_h3" class="active" data-es="Automatización Inmediata" data-en="Instant Automation">Automatización Inmediata</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="b1_p" class="active" data-es="Resuelve tareas repetitivas en segundos sin escribir una sola línea de código." data-en="Solve repetitive tasks in seconds without writing a single line of code.">Resuelve tareas repetitivas en segundos sin escribir una sola línea de código.</span>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100">
+                <div class="text-blue-600 text-2xl mb-3">🔒</div>
+                <h3 class="text-xl font-bold mb-2">
+                    <span data-i18n="b2_h3" class="active" data-es="Privacidad 100% Local" data-en="100% Local Privacy">Privacidad 100% Local</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="b2_p" class="active" data-es="Tus datos nunca suben a ningún servidor. Todo se procesa de forma nativa dentro de tu propio navegador." data-en="Your data never leaves your device. Everything is processed natively inside your own browser.">Tus datos nunca suben a ningún servidor. Todo se procesa de forma nativa dentro de tu propio navegador.</span>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100">
+                <div class="text-blue-600 text-2xl mb-3">🧰</div>
+                <h3 class="text-xl font-bold mb-2">
+                    <span data-i18n="b3_h3" class="active" data-es="Suite en crecimiento" data-en="Growing Suite">Suite en crecimiento</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="b3_p" class="active" data-es="Una sola marca para múltiples utilities de productividad. Nuevas herramientas se suman con el tiempo." data-en="One brand for multiple productivity utilities. New tools are added over time.">Una sola marca para múltiples utilities de productividad. Nuevas herramientas se suman con el tiempo.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. SECCIÓN EXCEL2FORMS -->
+    <section id="excel2forms" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">⚡ Excel2Forms</span>
+            <h2 class="text-3xl font-bold mb-4">
+                <span data-i18n="e2f_h2" class="active" data-es="Rellena formularios web desde Excel en 3 pasos" data-en="Fill web forms from Excel in 3 steps">Rellena formularios web desde Excel en 3 pasos</span>
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">
+                <span data-i18n="e2f_sub" class="active" data-es="Convierte tu hoja de cálculo en datos listos para enviar a cualquier formulario web. Sin escribir código, sin servidores, sin costo." data-en="Turn your spreadsheet into submittable data for any web form. No coding, no servers, no cost.">Convierte tu hoja de cálculo en datos listos para enviar a cualquier formulario web. Sin escribir código, sin servidores, sin costo.</span>
+            </p>
+        </div>
+
+        <!-- Pasos -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+            <div class="relative bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                <div class="absolute -top-4 left-6 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg shadow-md">1</div>
+                <div class="pt-4">
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">
+                        <span data-i18n="s1_h3" class="active" data-es="Carga tu archivo Excel" data-en="Upload your Excel file">Carga tu archivo Excel</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        <span data-i18n="s1_p" class="active" data-es="Arrastra tu archivo .xlsx o .csv directamente a la extensión. El sistema detecta automáticamente las columnas." data-en="Drag your .xlsx or .csv file directly into the extension. The system auto-detects columns.">Arrastra tu archivo .xlsx o .csv directamente a la extensión. El sistema detecta automáticamente las columnas.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                <div class="absolute -top-4 left-6 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg shadow-md">2</div>
+                <div class="pt-4">
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">
+                        <span data-i18n="s2_h3" class="active" data-es="Detecta y vincula campos" data-en="Detect and map fields">Detecta y vincula campos</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        <span data-i18n="s2_p" class="active" data-es="Abre cualquier formulario web y haz clic en 'Detectar Campos'. Vincula cada columna con su campo correspondiente." data-en="Open any web form and click 'Detect Fields'. Map each column to its corresponding field.">Abre cualquier formulario web y haz clic en 'Detectar Campos'. Vincula cada columna con su campo correspondiente.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="relative bg-white p-8 rounded-2xl shadow-md border border-slate-100 hover:shadow-lg transition-shadow">
+                <div class="absolute -top-4 left-6 bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold text-lg shadow-md">3</div>
+                <div class="pt-4">
+                    <h3 class="text-xl font-bold mb-3 text-slate-800">
+                        <span data-i18n="s3_h3" class="active" data-es="Ejecuta y migra" data-en="Execute and migrate">Ejecuta y migra</span>
+                    </h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        <span data-i18n="s3_p" class="active" data-es="Elige modo automático o manual. La herramienta completa el formulario y envía los datos sin intervención." data-en="Choose automatic or manual mode. The tool fills the form and submits data without intervention.">Elige modo automático o manual. La herramienta completa el formulario y envía los datos sin intervención.</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gratis -->
+        <div class="bg-white border-2 border-green-500 rounded-2xl p-8 text-center relative overflow-hidden max-w-3xl mx-auto">
+            <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-green-600 text-white text-xs font-bold px-4 py-1 rounded-full">
+                <span data-i18n="free_badge" class="active" data-es="100% GRATIS" data-en="100% FREE">100% GRATIS</span>
+            </span>
+            <div class="text-5xl mb-3">🎉</div>
+            <h3 class="text-2xl font-extrabold text-slate-800 mb-2">
+                <span data-i18n="free_h2" class="active" data-es="Completamente gratis, para siempre" data-en="Completely free, forever">Completamente gratis, para siempre</span>
+            </h3>
+            <p class="text-slate-500 text-sm mb-6 max-w-lg mx-auto">
+                <span data-i18n="free_sub" class="active" data-es="Sin licencias, sin suscripciones, sin límites de registros ni funciones ocultas." data-en="No licenses, no subscriptions, no record limits, no hidden features.">Sin licencias, sin suscripciones, sin límites de registros ni funciones ocultas.</span>
+            </p>
+            <ul class="text-sm text-slate-600 space-y-2 mb-8 text-left max-w-xs mx-auto">
+                <li>✅ <span data-i18n="free_f1" class="active" data-es="Registros ilimitados" data-en="Unlimited records">Registros ilimitados</span></li>
+                <li>✅ <span data-i18n="free_f2" class="active" data-es="Modo automático y manual" data-en="Automatic and manual mode">Modo automático y manual</span></li>
+                <li>✅ <span data-i18n="free_f3" class="active" data-es="CSV / Excel" data-en="CSV / Excel">CSV / Excel</span></li>
+                <li>✅ <span data-i18n="free_f4" class="active" data-es="Reporte CSV con resultados" data-en="CSV report with results">Reporte CSV con resultados</span></li>
+                <li>✅ <span data-i18n="free_f5" class="active" data-es="100% local y privado" data-en="100% local and private">100% local y privado</span></li>
+                <li>✅ <span data-i18n="free_f6" class="active" data-es="Actualizaciones incluidas" data-en="Updates included">Actualizaciones incluidas</span></li>
+            </ul>
+            <div class="flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="https://chromewebstore.google.com/detail/excel2forms-web-form-auto/akpoionmboejidpnolfehdjfeopmibla?authuser=4&hl=es-419" target="_blank" rel="noopener noreferrer" class="inline-block bg-green-600 hover:bg-green-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition-all">
+                    <span data-i18n="free_cta" class="active" data-es="Descargar Gratis Ahora" data-en="Download Free Now">Descargar Gratis Ahora</span>
+                </a>
+                <a href="https://www.youtube.com/watch?v=5273sAHAIcE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 bg-white border-2 border-slate-200 hover:border-red-400 text-slate-700 font-semibold px-6 py-4 rounded-xl transition-colors">
+                    <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                    <span data-i18n="e2f_demo" class="active" data-es="Ver Demo" data-en="Watch Demo">Ver Demo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. SECCIÓN AID -->
+    <section id="aid" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🤖 AID</span>
+            <h2 class="text-3xl font-bold mb-4">
+                <span data-i18n="aid_h2" class="active" data-es="AID — Asistente de Ingreso de Datos" data-en="AID — Data Entry Assistant">AID — Asistente de Ingreso de Datos</span>
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">
+                <span data-i18n="aid_sub" class="active" data-es="Automatiza el llenado de formularios web desde Excel con 3 modos de llenado. 100% offline, sin rastreo y con datos 100% locales." data-en="Automate filling web forms from Excel with 3 fill modes. 100% offline, no tracking, fully local data.">Automatiza el llenado de formularios web desde Excel con 3 modos de llenado. 100% offline, sin rastreo y con datos 100% locales.</span>
+            </p>
+        </div>
+
+        <!-- 3 modos -->
+        <div class="grid md:grid-cols-3 gap-6 mb-12">
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100 text-center">
+                <div class="text-3xl mb-3">⏱️</div>
+                <h3 class="font-bold mb-2">
+                    <span data-i18n="aid_m1" class="active" data-es="Semi-automático" data-en="Semi-automatic">Semi-automático</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="aid_m1_p" class="active" data-es="Llena 1 registro y se detiene. Tú das clic en 'Siguiente' cuando estés listo." data-en="Fills 1 record and stops. You click 'Next' when ready.">Llena 1 registro y se detiene. Tú das clic en 'Siguiente' cuando estés listo.</span>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100 text-center">
+                <div class="text-3xl mb-3">📋</div>
+                <h3 class="font-bold mb-2">
+                    <span data-i18n="aid_m2" class="active" data-es="Por fila" data-en="Row by row">Por fila</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="aid_m2_p" class="active" data-es="Llena toda una fila completa y se detiene. Ideal para revisar antes de seguir." data-en="Fills a complete row and stops. Ideal for reviewing before continuing.">Llena toda una fila completa y se detiene. Ideal para revisar antes de seguir.</span>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100 text-center">
+                <div class="text-3xl mb-3">⚡</div>
+                <h3 class="font-bold mb-2">
+                    <span data-i18n="aid_m3" class="active" data-es="Automático" data-en="Automatic">Automático</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="aid_m3_p" class="active" data-es="Procesa todos los registros de corrido sin detenerse. Solo siéntate a ver." data-en="Processes all records in a row without stopping. Just sit back and watch.">Procesa todos los registros de corrido sin detenerse. Solo siéntate a ver.</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Usos -->
+        <h3 class="text-xl font-bold text-center mb-6">
+            <span data-i18n="aid_uses_h3" class="active" data-es="¿Para qué lo puedes usar?" data-en="What can you use it for?">¿Para qué lo puedes usar?</span>
+        </h3>
+        <div class="grid md:grid-cols-3 gap-4 mb-10">
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">🎓</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="aid_u1" class="active" data-es="Educación" data-en="Education">Educación</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="aid_u1_p" class="active" data-es="Calificaciones, actas, asistencia, kardex de estudiantes" data-en="Grades, records, attendance, student files">Calificaciones, actas, asistencia, kardex de estudiantes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">🏥</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="aid_u2" class="active" data-es="Salud" data-en="Health">Salud</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="aid_u2_p" class="active" data-es="Historiales clínicos, pacientes, inventarios de medicamentos" data-en="Clinical records, patients, medicine inventories">Historiales clínicos, pacientes, inventarios de medicamentos</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">👥</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="aid_u3" class="active" data-es="RRHH" data-en="HR">RRHH</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="aid_u3_p" class="active" data-es="Planillas, evaluaciones, control de horas, nómina" data-en="Spreadsheets, evaluations, time tracking, payroll">Planillas, evaluaciones, control de horas, nómina</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">💰</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="aid_u4" class="active" data-es="Finanzas" data-en="Finance">Finanzas</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="aid_u4_p" class="active" data-es="Créditos, transacciones, estados de cuenta, reportes" data-en="Credits, transactions, account statements, reports">Créditos, transacciones, estados de cuenta, reportes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">🏛️</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="aid_u5" class="active" data-es="Gobierno" data-en="Government">Gobierno</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="aid_u5_p" class="active" data-es="Trámites en línea, registros civiles, formularios municipales" data-en="Online procedures, civil records, municipal forms">Trámites en línea, registros civiles, formularios municipales</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">📦</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="aid_u6" class="active" data-es="Otros" data-en="Others">Otros</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="aid_u6_p" class="active" data-es="CRM, inventario, pedidos, soporte, cualquier formulario repetitivo" data-en="CRM, inventory, orders, support, any repetitive form">CRM, inventario, pedidos, soporte, cualquier formulario repetitivo</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="https://www.youtube.com/watch?v=OyEkU8XodAc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-slate-900 hover:bg-slate-800 text-white font-semibold px-8 py-4 rounded-xl transition-colors">
+                <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                <span data-i18n="aid_demo_cta" class="active" data-es="Ver Demo de AID" data-en="Watch AID Demo">Ver Demo de AID</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 6. SECCIÓN VIDEOFRASES -->
+    <section id="videofrases" class="max-w-5xl mx-auto px-6 py-16 border-t border-slate-200">
+        <div class="text-center mb-12">
+            <span class="inline-block bg-blue-600 text-white text-xs font-bold px-3 py-1 rounded-full mb-3">🎬 VideoFrases</span>
+            <h2 class="text-3xl font-bold mb-4">
+                <span data-i18n="vf_h2" class="active" data-es="Aprende inglés con videos generados por IA" data-en="Learn English with AI-generated videos">Aprende inglés con videos generados por IA</span>
+            </h2>
+            <p class="text-slate-600 max-w-2xl mx-auto">
+                <span data-i18n="vf_sub" class="active" data-es="Genera videos con frases en inglés, pronunciación fonética y voz natural. Elige una categoría y crea tu video en minutos." data-en="Generate videos with English phrases, phonetic pronunciation, and natural voices. Pick a category and create your video in minutes.">Genera videos con frases en inglés, pronunciación fonética y voz natural. Elige una categoría y crea tu video en minutos.</span>
+            </p>
+        </div>
+
+        <!-- Categorías -->
+        <div class="grid md:grid-cols-3 gap-4 mb-10">
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">💻</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="vf_c1" class="active" data-es="Developer" data-en="Developer">Developer</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="vf_c1_p" class="active" data-es="Frases de daily, code review, PRs y standups" data-en="Daily standups, code review, PRs phrases">Frases de daily, code review, PRs y standups</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">💼</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="vf_c2" class="active" data-es="Business" data-en="Business">Business</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="vf_c2_p" class="active" data-es="Reuniones, presentaciones y negociaciones" data-en="Meetings, presentations, and negotiations">Reuniones, presentaciones y negociaciones</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">✈️</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="vf_c3" class="active" data-es="Travel" data-en="Travel">Travel</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="vf_c3_p" class="active" data-es="Aeropuertos, hoteles, restaurantes y más" data-en="Airports, hotels, restaurants, and more">Aeropuertos, hoteles, restaurantes y más</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">🎙️</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="vf_c4" class="active" data-es="Interview" data-en="Interview">Interview</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="vf_c4_p" class="active" data-es="Entrevistas de trabajo en inglés" data-en="Job interviews in English">Entrevistas de trabajo en inglés</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">☕</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="vf_c5" class="active" data-es="Conversación" data-en="Conversation">Conversación</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="vf_c5_p" class="active" data-es="Small talk diario y situaciones comunes" data-en="Daily small talk and common situations">Small talk diario y situaciones comunes</span>
+                    </p>
+                </div>
+            </div>
+            <div class="bg-white p-4 rounded-xl border border-slate-100 flex items-start gap-3">
+                <span class="text-2xl">🧠</span>
+                <div>
+                    <h4 class="font-bold text-sm mb-1">
+                        <span data-i18n="vf_c6" class="active" data-es="Errores comunes" data-en="Common mistakes">Errores comunes</span>
+                    </h4>
+                    <p class="text-slate-600 text-xs">
+                        <span data-i18n="vf_c6_p" class="active" data-es="Errores frecuentes de hispanohablantes corregidos" data-en="Frequent Spanish-speaker mistakes corrected">Errores frecuentes de hispanohablantes corregidos</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="grid md:grid-cols-3 gap-6 mb-10">
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100 text-center">
+                <div class="text-3xl mb-3">🗣️</div>
+                <h3 class="font-bold mb-2">
+                    <span data-i18n="vf_f1" class="active" data-es="Voz natural con IA" data-en="Natural AI voice">Voz natural con IA</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="vf_f1_p" class="active" data-es="Voces en inglés y español. Narra cada frase en ambos idiomas." data-en="Voices in English and Spanish. Narrates each phrase in both languages.">Voces en inglés y español. Narra cada frase en ambos idiomas.</span>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100 text-center">
+                <div class="text-3xl mb-3">🎨</div>
+                <h3 class="font-bold mb-2">
+                    <span data-i18n="vf_f2" class="active" data-es="Fondos y branding" data-en="Backgrounds and branding">Fondos y branding</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="vf_f2_p" class="active" data-es="Fondos por categoría, imagen propia o color. Logo y nombre de tu canal." data-en="Category backgrounds, custom image, or color. Your channel logo and name.">Fondos por categoría, imagen propia o color. Logo y nombre de tu canal.</span>
+                </p>
+            </div>
+            <div class="bg-white p-6 rounded-xl shadow-xs border border-slate-100 text-center">
+                <div class="text-3xl mb-3">📱</div>
+                <h3 class="font-bold mb-2">
+                    <span data-i18n="vf_f3" class="active" data-es="YouTube Shorts y más" data-en="YouTube Shorts and more">YouTube Shorts y más</span>
+                </h3>
+                <p class="text-slate-600 text-sm">
+                    <span data-i18n="vf_f3_p" class="active" data-es="Formato horizontal, vertical (Shorts) o cuadrado. Exporta en MP4." data-en="Horizontal, vertical (Shorts), or square format. Export as MP4.">Formato horizontal, vertical (Shorts) o cuadrado. Exporta en MP4.</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <div class="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                <a href="https://videofrases.onrender.com/" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg px-10 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5">
+                    <span data-i18n="vf_cta" class="active" data-es="Usar VideoFrases Gratis" data-en="Use VideoFrases Free">Usar VideoFrases Gratis</span>
+                </a>
+                <a href="https://youtube.com/shorts/1djWN1P7_FE" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-white border-2 border-slate-200 hover:border-red-400 text-slate-700 font-semibold px-6 py-4 rounded-xl transition-colors">
+                    <svg class="w-6 h-6 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                    <span data-i18n="vf_demo" class="active" data-es="Ver Demo" data-en="Watch Demo">Ver Demo</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. PRIVACIDAD -->
+    <section class="max-w-3xl mx-auto px-6 py-12 border-t border-slate-200">
+        <div class="flex items-start gap-4">
+            <div class="text-3xl mt-1">🔒</div>
+            <div>
+                <h2 class="text-xl font-bold mb-3">
+                    <span data-i18n="privacy_h2" class="active" data-es="Tu privacidad es primero" data-en="Your privacy comes first">Tu privacidad es primero</span>
+                </h2>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                    <span data-i18n="privacy_p" class="active" data-es="Las herramientas de Johnny Q | Tech Tools no recopilan, almacenan ni transmiten ningún dato personal. Todo el procesamiento ocurre localmente en tu navegador. Ninguna información se envía a servidores externos." data-en="Johnny Q | Tech Tools does not collect, store, or transmit any personal data. All data processing occurs locally in your browser. No information is sent to external servers.">Las herramientas de Johnny Q | Tech Tools no recopilan, almacenan ni transmiten ningún dato personal. Todo el procesamiento ocurre localmente en tu navegador. Ninguna información se envía a servidores externos.</span>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. CONTACTO -->
+    <section class="max-w-3xl mx-auto px-6 py-12 text-center">
+        <h2 class="text-2xl font-bold mb-2">
+            <span data-i18n="contact_h2" class="active" data-es="¿Tienes preguntas o ideas para nuevas herramientas?" data-en="Got questions or ideas for new tools?">¿Tienes preguntas o ideas para nuevas herramientas?</span>
+        </h2>
+        <p class="text-slate-500 text-sm mb-6">
+            <span data-i18n="contact_p" class="active" data-es="Escríbenos por el formulario: respondemos preguntas y leemos sugerencias para las próximas utilities." data-en="Write us through the form: we answer questions and read suggestions for the next utilities.">Escríbenos por el formulario: respondemos preguntas y leemos sugerencias para las próximas utilities.</span>
+        </p>
+        <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-y-auto mb-6 no-scrollbar" style="height:500px">
+            <iframe src="https://tally.so/r/xXeD5E?hideTitle=1" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" title="Contacto" style="margin-top:-120px;border:0"></iframe>
+        </div>
+        <a href="https://wa.me/50586443987?text=Hola%2C%20tengo%20una%20consulta%20sobre%20las%20herramientas" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold px-6 py-3 rounded-xl transition-colors">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            <span data-i18n="contact_wa" class="active" data-es="O escríbenos por WhatsApp" data-en="Or message us on WhatsApp">O escríbenos por WhatsApp</span>
+        </a>
+    </section>
+
+    <!-- 9. FOOTER -->
+    <footer class="text-center py-12 text-xs text-slate-400 border-t border-slate-100">
+        <p class="mb-4 text-sm text-slate-600">
+            <span data-i18n="footer_yt_hint" class="active" data-es="💬 ¿La herramienta te está sirviendo? ¿Tienes alguna sugerencia? Deja tu comentario en nuestro canal de YouTube — leemos todos." data-en="💬 Is the tool helping you? Have any suggestions? Leave a comment on our YouTube channel — we read them all.">💬 ¿La herramienta te está sirviendo? ¿Tienes alguna sugerencia? Deja tu comentario en nuestro canal de YouTube — leemos todos.</span>
+        </p>
+        <div class="flex justify-center gap-4 mb-4">
+            <a href="https://www.youtube.com/@johnnyqtechtools" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-slate-500 hover:text-red-500 transition-colors">
+                <svg class="w-4 h-4 inline-block align-middle" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg> YouTube
+            </a>
+        </div>
+        <p>© 2026 Johnny Q | Tech Tools. All rights reserved.</p>
+    </footer>
+
+    <script>
+        (function(){
+            const saved = localStorage.getItem('lang');
+            const browserLang = navigator.language || navigator.userLanguage;
+            let current = saved || (browserLang.startsWith('es') ? 'es' : 'en');
+
+            function applyLang(lang){
+                current = lang;
+                localStorage.setItem('lang', lang);
+                document.documentElement.lang = lang;
+                document.getElementById('langLabel').textContent = lang === 'es' ? 'EN' : 'ES';
+                
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const text = el.getAttribute('data-' + lang);
+                    if(text) el.textContent = text;
+                });
+            }
+
+            document.getElementById('langToggle').addEventListener('click', () => {
+                applyLang(current === 'es' ? 'en' : 'es');
+            });
+
+            applyLang(current);
+        })();
+    </script>
+
+</body>
+</html>
