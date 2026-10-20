@@ -115,3 +115,31 @@ https://johnnytechtools.vercel.app/
 5. [ ] Actualizar `sitemap.xml` con las nuevas rutas.
 6. [ ] Probar navegación, responsiveness y selector de idioma en local.
 7. [ ] Hacer `git commit`, `git push` para que Vercel despliegue las nuevas páginas automáticamente.
+
+---
+
+## 6. Métricas y Analítica de Vercel (Web Analytics & Speed Insights)
+
+Para medir el tráfico, visitantes y rendimiento Core Web Vitals en cada página independiente del nuevo proyecto:
+
+### A. Habilitar en el Dashboard de Vercel
+1. Ir al nuevo proyecto en [Vercel](https://vercel.com/) (**johnnytechtools**).
+2. Entrar a la pestaña **Analytics** y hacer clic en **Enable Web Analytics**.
+3. Entrar a la pestaña **Speed Insights** y hacer clic en **Enable Speed Insights**.
+
+### B. Inclusión del Script en todas las páginas HTML
+Asegurar que cada una de las 4 páginas (`index.html`, `excel2forms.html`, `aid.html`, `videofrases.html`) incluya en el `<head>`:
+```html
+<!-- Vercel Web Analytics -->
+<script>
+  window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/insights/script.js"></script>
+
+<!-- Vercel Speed Insights -->
+<script>
+  window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+</script>
+<script defer src="/_vercel/speed-insights/script.js"></script>
+```
+*Esto permitirá medir visitas, páginas vistas y rendimiento por cada herramienta de forma individual en el panel de Vercel.*
