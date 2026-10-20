@@ -67,7 +67,7 @@
           "name": "¿Mis datos de Excel suben a algún servidor o base de datos en la nube?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "No. Absolutamente todo el procesamiento de las hojas de cálculo y la inyección en formularios se realiza de forma local en la memoria de tu navegador Chrome. Ninguna información sensible sale de tu computadora."
+            "text": "No. Tus archivos Excel y CSV se leen en tu navegador y no se suben a nuestros servidores ni a la nube. Los datos solo salen hacia el formulario web que tú elijas completar, igual que si los escribieras a mano; ese sitio los trata según su propia política de privacidad."
           }
         },
         {
@@ -139,11 +139,11 @@
 
     <main class="flex-grow">
         <!-- 1. HERO CON PROBLEMA CENTRAL -->
-        <section class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
+        <section class="max-w-5xl mx-auto px-6 pt-16 pb-8 text-center">
             <div class="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-6">
                 <span>🛡️ Automatización local en Chrome</span>
                 <span class="text-slate-300">•</span>
-                <span>Sin servidores externos</span>
+                <span>Tus archivos no se suben a la nube</span>
             </div>
 
             <!-- H1 Orientado al Problema del Usuario -->
@@ -159,7 +159,7 @@
                 <a href="#herramientas" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center">
                     Ver soluciones de automatización ↓
                 </a>
-                <a href="https://tally.so/r/xXeD5E" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white border-2 border-slate-200 hover:border-blue-500 text-slate-700 font-semibold text-base md:text-lg px-6 py-3.5 rounded-xl transition-colors text-center" onclick="if(window.va) va('event', { name: 'newsletter_hero_click' });">
+                <a href="#contacto" class="w-full sm:w-auto bg-white border-2 border-slate-200 hover:border-blue-500 text-slate-700 font-semibold text-base md:text-lg px-6 py-3.5 rounded-xl transition-colors text-center" onclick="if(window.va) va('event', { name: 'newsletter_hero_click' });">
                     Unirse a la lista de novedades
                 </a>
             </div>
@@ -168,6 +168,22 @@
                 <span>✓ Acceso gratuito durante la fase de prueba</span>
                 <span class="mx-2">•</span>
                 <span>✓ Pruébalo gratis, sin tarjeta de crédito</span>
+            </div>
+        </section>
+
+        <!-- CAPTURA VISUAL DEL MAPEO EN EL HUB -->
+        <section class="max-w-4xl mx-auto px-6 pb-12">
+            <div class="bg-white p-4 rounded-3xl border border-slate-200 shadow-md">
+                <img 
+                    src="/assets/og-excel2forms.png" 
+                    alt="Mapeo visual de columnas de Excel a campos de formulario web con Excel2Forms" 
+                    width="1200" 
+                    height="675" 
+                    class="w-full h-auto rounded-2xl border border-slate-100 object-cover"
+                    loading="lazy">
+                <p class="text-xs text-slate-500 text-center mt-3">
+                    Vinculación visual e intuitiva: conecta tus columnas de Excel directamente con los campos de tu formulario en el navegador.
+                </p>
             </div>
         </section>
 
@@ -304,7 +320,7 @@
                         <a href="/aid" class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl transition-colors text-center shadow-sm">
                             Conocer más sobre AID →
                         </a>
-                        <a href="https://tally.so/r/xXeD5E" target="_blank" rel="noopener noreferrer" class="block w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2.5 rounded-xl transition-colors text-center text-sm" onclick="if(window.va) va('event', { name: 'hub_click_aid_waitlist' });">
+                        <a href="#contacto" class="block w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2.5 rounded-xl transition-colors text-center text-sm" onclick="if(window.va) va('event', { name: 'hub_click_aid_waitlist' });">
                             Avísame cuando esté disponible en Chrome
                         </a>
                     </div>
@@ -322,13 +338,13 @@
                             Compromiso de Privacidad y Seguridad
                         </div>
                         <h2 class="text-2xl md:text-3xl font-extrabold mb-4 text-white">
-                            Tus hojas de cálculo nunca tocan un servidor externo
+                            Tus archivos no se suben a la nube
                         </h2>
                         <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-4">
-                            A diferencia de otras plataformas web donde debes subir tus archivos confidenciales a la nube para procesarlos, nuestras extensiones operan <strong>100% dentro del entorno seguro de tu navegador</strong>.
+                            A diferencia de otras plataformas web donde debes subir tus archivos confidenciales para procesarlos, nuestras extensiones operan <strong>dentro de tu navegador</strong>.
                         </p>
                         <p class="text-slate-300 text-sm md:text-base leading-relaxed">
-                            Los nombres, identificaciones, salarios o expedientes médicos se leen directamente en la memoria local de Google Chrome. Ninguna fila, columna o credencial se envía a bases de datos de terceros.
+                            Los nombres, identificaciones, salarios o expedientes se leen directamente en tu computadora. Los datos solo salen hacia el formulario web que tú elijas completar, igual que si los escribieras a mano.
                         </p>
                     </div>
                 </div>
@@ -368,7 +384,7 @@
                         <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
                     </summary>
                     <p class="mt-4 text-slate-600 text-sm leading-relaxed">
-                        No. Absolutamente todo el procesamiento de tus archivos Excel y CSV ocurre en la memoria local de tu propio navegador. Ninguna información viaja a internet ni se almacena fuera de tu computadora.
+                        No. Tus archivos Excel y CSV se leen en tu navegador y no se suben a nuestros servidores ni a la nube. Los datos solo salen hacia el formulario web que tú elijas completar, igual que si los escribieras a mano; ese sitio los trata según su propia política de privacidad.
                     </p>
                 </details>
 
