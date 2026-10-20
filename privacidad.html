@@ -61,47 +61,59 @@
 
             <div class="space-y-6 text-sm text-slate-600 leading-relaxed">
                 <section>
-                    <h2 class="text-lg font-bold text-slate-800 mb-2">1. Principio Fundamental: Procesamiento 100% Local</h2>
+                    <h2 class="text-lg font-bold text-slate-800 mb-2">1. Principio de Procesamiento Local y Destino de los Datos</h2>
                     <p>
-                        En <strong>Johnny Q | Tech Tools</strong>, la privacidad de tus datos es nuestra máxima prioridad de diseño. Nuestras extensiones de navegador (incluyendo <strong>Excel2Forms</strong> y <strong>AID</strong>) operan bajo el principio de <strong>ejecución local (in-browser)</strong>:
+                        Las herramientas y extensiones de <strong>Johnny Q | Tech Tools</strong> (incluyendo <strong>Excel2Forms</strong> y <strong>AID</strong>) operan bajo una arquitectura de <strong>ejecución local en el navegador</strong>:
                     </p>
                     <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
-                        <li>Tus archivos Excel (.xlsx), CSV u hojas de cálculo se leen directamente en la memoria interna de tu navegador en tu computadora local.</li>
-                        <li><strong>Ningún dato, registro, fila, columna o información personal procesada por la herramienta se envía, almacena o transmite a servidores externos</strong> pertenecientes a Johnny Q o a terceros.</li>
-                        <li>La inyección y llenado de formularios ocurre directamente entre tu navegador y el sitio web de destino que tú estás visitando.</li>
+                        <li>Tus archivos Excel (.xlsx), CSV u hojas de cálculo se procesan directamente en la memoria interna de tu navegador en tu computadora local.</li>
+                        <li><strong>Ningún dato, registro, fila, columna o información personal procesada por la herramienta se envía, almacena o transmite a servidores externos</strong> pertenecientes a Johnny Q.</li>
+                        <li><strong>Destino de los datos:</strong> Los datos que la extensión escribe en un formulario se envían al sitio web de destino, igual que si los hubieras digitado tú. Ese sitio los recibe y los trata según su propia política de privacidad, sobre la cual Johnny Q no tiene control ni responsabilidad.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-slate-800 mb-2">2. Datos Recopilados por el Sitio Web</h2>
+                    <h2 class="text-lg font-bold text-slate-800 mb-2">2. Almacenamiento Local y Permisos de las Extensiones</h2>
                     <p>
-                        Cuando navegas por nuestro sitio web informativo (<code>johnnytechtools.vercel.app</code>), se aplican las siguientes prácticas de recolección mínima:
+                        Para su funcionamiento técnico dentro de Google Chrome, las extensiones hacen uso de las siguientes capacidades locales del navegador:
                     </p>
                     <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
-                        <li><strong>Analítica Web Anónima:</strong> Utilizamos <em>Vercel Web Analytics</em> y <em>Speed Insights</em> para medir rendimiento técnico (tiempos de carga, Core Web Vitals) y métricas de tráfico globales (páginas visitadas, tipo de dispositivo). Esta analítica no utiliza cookies de rastreo entre sitios ni recopila información de identificación personal (PII).</li>
-                        <li><strong>Formularios de Contacto y Lista de Espera:</strong> Los formularios de consulta y registro voluntario son gestionados a través de la plataforma <em>Tally</em> (Tally.so). Los datos que ingreses voluntariamente (como tu correo electrónico o mensajes de consulta) se almacenan de forma segura en Tally y se utilizan exclusivamente para responder a tu mensaje o avisarte del lanzamiento de nuevas herramientas y planes.</li>
+                        <li><strong>Almacenamiento Local (chrome.storage):</strong> La extensión puede almacenar de forma local en tu navegador preferencias de usuario y configuraciones (por ejemplo, el mapeo de columnas guardado para no tener que repetirlo en el mismo formulario). Estos datos permanecen exclusivamente en tu navegador y no se sincronizan con servidores de Johnny Q.</li>
+                        <li><strong>Permisos de Interacción:</strong> Las extensiones requieren interactuar con la pestaña activa para analizar los campos de entrada del formulario (<code>&lt;input&gt;</code>, <code>&lt;select&gt;</code>) e insertar los valores correspondientes. No se monitorea el historial de navegación ni se accede a información de pestañas que no formen parte de la tarea que estás ejecutando voluntariamente.</li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-slate-800 mb-2">3. Permisos de las Extensiones de Chrome</h2>
+                    <h2 class="text-lg font-bold text-slate-800 mb-2">3. Servicios de Terceros y Datos en el Sitio Web</h2>
                     <p>
-                        Nuestras extensiones de Chrome solicitan únicamente los permisos técnicos estrictamente indispensables para interactuar con las pestañas donde decides ejecutar la automatización (como leer campos de formularios <code>&lt;input&gt;</code> para emparejarlos con tus columnas). No monitoreamos tu historial de navegación ni accedemos a sitios ajenos al formulario que estás completando voluntariamente.
+                        Cuando visitas nuestro sitio web informativo (<code>johnnytechtools.vercel.app</code>), se utilizan servicios de terceros sujetos a sus propios términos y políticas de privacidad:
+                    </p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+                        <li><strong>Analítica Web (Vercel):</strong> Empleamos <em>Vercel Web Analytics</em> y <em>Speed Insights</em> para monitorizar el rendimiento técnico y métricas de navegación globales. Según la documentación oficial de Vercel, este servicio no utiliza cookies de rastreo entre sitios ni recopila información de identificación personal (PII).</li>
+                        <li><strong>Formularios de Contacto y Lista de Espera (Tally):</strong> Los formularios para consultas o para recibir novedades sobre lanzamientos y el plan Pro son provistos por la plataforma <em>Tally</em> (<a href="https://tally.so/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">tally.so</a>). Los datos que ingreses voluntariamente se almacenan en los servidores de Tally según su propia política de privacidad.</li>
+                        <li><strong>Videos Demostrativos (YouTube):</strong> Los videos explicativos incrustados en nuestras páginas se cargan utilizando el dominio con modo de privacidad mejorada de Google (<code>youtube-nocookie.com</code>). Al reproducir un video, YouTube/Google puede recopilar información técnica de reproducción de acuerdo con la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">Política de Privacidad de Google</a>.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="text-lg font-bold text-slate-800 mb-2">4. Tus Derechos de Acceso y Supresión</h2>
+                    <p>
+                        Dado que nuestras extensiones no transmiten ni almacenan tus archivos o registros en bases de datos externas, no conservamos copias de la información que procesas. En relación con el correo electrónico que nos proporciones voluntariamente en listas de espera o formularios, puedes solicitar en cualquier momento su confirmación o eliminación definitiva escribiéndonos a nuestro correo de contacto.
                     </p>
                 </section>
 
                 <section>
-                    <h2 class="text-lg font-bold text-slate-800 mb-2">4. Tus Derechos</h2>
+                    <h2 class="text-lg font-bold text-slate-800 mb-2">5. Responsable del Tratamiento y Contacto</h2>
                     <p>
-                        Dado que no almacenamos tus archivos ni tus registros en servidores propios, no retenemos copias de tus datos. En cuanto al correo electrónico proporcionado voluntariamente en listas de espera, puedes solicitar en cualquier momento su eliminación inmediata de nuestra lista de distribución escribiéndonos a nuestros canales oficiales.
+                        El responsable de este sitio y de las herramientas es <strong>Johnny Q</strong> (desarrollador independiente), con residencia en Managua, Nicaragua.
                     </p>
-                </section>
-
-                <section>
-                    <h2 class="text-lg font-bold text-slate-800 mb-2">5. Contacto</h2>
-                    <p>
-                        Si tienes cualquier duda, inquietud o sugerencia sobre nuestras prácticas de privacidad, puedes contactar al desarrollador directamente a través de nuestro WhatsApp oficial o mediante el formulario de contacto en la página de inicio.
+                    <p class="mt-2">
+                        Para cualquier consulta formal, solicitud de baja de correos o dudas sobre privacidad, puedes comunicarte a:
                     </p>
+                    <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-700">
+                        <li><strong>Correo electrónico:</strong> <a href="mailto:johnnyqtechtools@gmail.com" class="text-blue-600 font-semibold underline">johnnyqtechtools@gmail.com</a></li>
+                        <li><strong>Atención directa:</strong> Canal de WhatsApp oficial disponible en la web.</li>
+                    </ul>
                 </section>
             </div>
 
