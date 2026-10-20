@@ -2,8 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://johnnytechtools.vercel.app/</loc>
-    <lastmod>2026-10-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://johnnytechtools.vercel.app/excel2forms</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://johnnytechtools.vercel.app/aid</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://johnnytechtools.vercel.app/privacidad</loc>
+    <lastmod>2026-10-19</lastmod>
+  </url>
+  <url>
+    <loc>https://johnnytechtools.vercel.app/terminos</loc>
+    <lastmod>2026-10-19</lastmod>
   </url>
 </urlset>

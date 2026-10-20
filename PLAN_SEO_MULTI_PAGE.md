@@ -40,6 +40,7 @@ https://johnnytechtools.vercel.app/
   * Demostración en video embebida.
   * Botón directo a Chrome Web Store.
   * Guía paso a paso: cómo cargar el archivo, mapear campos y ejecutar el llenado.
+  * **Ajuste de Copy / Pricing**: Reemplazar *"Completamente gratis, para siempre"* por copy orientado a **Acceso Gratuito / Versión de Prueba (Early Access / Beta Pública)** (ej. *"Acceso gratuito por tiempo limitado durante fase de prueba"* / *"Pruébalo gratis sin tarjeta"*), evitando atarse a un compromiso permanente de "gratis para siempre".
   * Casos de uso y testimonios / FAQ específica de Excel2Forms.
 
 ### C. `/aid.html` — Keyword Target: "Asistente de Ingreso de Datos Offline"
@@ -109,9 +110,10 @@ https://johnnytechtools.vercel.app/
 
 ## 5. Pasos de Ejecución (Al abrir el nuevo proyecto)
 1. [ ] Crear `excel2forms.html` extrayendo y expandiendo la sección de Excel2Forms.
+   * Modificar el bloque de "Completamente gratis, para siempre" por un enfoque de **"Acceso anticipado / Versión de prueba gratuita"** (sin ataduras de "para siempre").
 2. [ ] Crear `aid.html` extrayendo y expandiendo la sección de AID.
 3. [ ] Crear `videofrases.html` extrayendo y expandiendo la sección de VideoFrases.
-4. [ ] Refactorizar `index.html` para convertirlo en un Hub limpio que enlaza a las subpáginas.
+4. [ ] Refactorizar `index.html` para convertirlo en un Hub limpio que enlaza a las subpáginas (actualizando también referencias de "gratis para siempre" a "pruébalo gratis").
 5. [ ] Actualizar `sitemap.xml` con las nuevas rutas.
 6. [ ] Probar navegación, responsiveness y selector de idioma en local.
 7. [ ] Hacer `git commit`, `git push` para que Vercel despliegue las nuevas páginas automáticamente.

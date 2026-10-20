@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llenar Formularios Web desde Excel — Extensión Chrome | Excel2Forms</title>
+    <meta name="description" content="Aprende a llenar formularios web desde Excel o CSV automáticamente. Extensión de Chrome para autollenar campos web sin copiar y pegar. 100% local y segura.">
+    <meta name="keywords" content="llenar formularios web desde excel, autollenar formulario chrome, subir datos de excel a una web, extension chrome para formularios, automatizar formularios excel">
+    <link rel="canonical" href="https://johnnytechtools.vercel.app/excel2forms">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://johnnytechtools.vercel.app/excel2forms">
+    <meta property="og:title" content="Llenar Formularios Web desde Excel — Extensión Chrome | Excel2Forms">
+    <meta property="og:description" content="Automatiza el llenado y envío de formularios web con datos de hojas de cálculo Excel o CSV. Sin programación y 100% offline.">
+    <meta property="og:image" content="https://johnnytechtools.vercel.app/assets/og-excel2forms.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://johnnytechtools.vercel.app/excel2forms">
+    <meta name="twitter:title" content="Llenar Formularios Web desde Excel — Extensión Chrome | Excel2Forms">
+    <meta name="twitter:description" content="Automatiza el llenado y envío de formularios web con datos de hojas de cálculo Excel o CSV. Sin programación y 100% offline.">
+    <meta name="twitter:image" content="https://johnnytechtools.vercel.app/assets/og-excel2forms.png">
+
+    <!-- Schema JSON-LD SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Excel2Forms",
+      "applicationCategory": "BrowserApplication",
+      "operatingSystem": "Chrome",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Extensión de Google Chrome para autollenar y enviar formularios web desde archivos Excel (.xlsx) y CSV con vinculación automática de campos.",
+      "url": "https://johnnytechtools.vercel.app/excel2forms"
+    }
+    </script>
+
+    <!-- Schema FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Cómo detecta Excel2Forms las casillas de un formulario web?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Al pulsar 'Detectar Campos', la extensión analiza la estructura HTML de la página web activa, identificando etiquetas <input>, <select>, <textarea> y radios para que puedas asociar cada columna de tu Excel con el elemento correspondiente mediante menús desplegables."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué formatos de archivo soporta?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Excel2Forms es compatible con archivos de hojas de cálculo modernas de Microsoft Excel (.xlsx) y archivos delimitados por comas (.csv)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué ocurre si un registro falla durante el envío automático?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "La extensión registra el estado de cada fila enviada. Al finalizar el lote, puedes descargar un reporte detallado en CSV que indica cuáles registros se enviaron con éxito y cuáles tuvieron alguna advertencia o error."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Mis datos se guardan o envían a algún servidor?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Excel2Forms procesa tus archivos exclusivamente en la memoria local de tu navegador. Ninguna fila, dato personal o valor de tu hoja de cálculo sale de tu equipo."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Vercel Web Analytics & Speed Insights -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER GLOBAL -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 font-extrabold text-xl tracking-tight text-slate-800 hover:text-blue-600 transition-colors">
+                <span class="text-blue-600 text-2xl">⚡</span>
+                <span>Johnny Q <span class="text-blue-600">|</span> Tech Tools</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600" aria-label="Navegación principal">
+                <a href="/" class="hover:text-blue-600 transition-colors py-1">Inicio</a>
+                <a href="/excel2forms" class="text-blue-600 border-b-2 border-blue-600 py-1" aria-current="page">Excel2Forms</a>
+                <a href="/aid" class="hover:text-blue-600 transition-colors py-1">AID</a>
+                <a href="#contacto" class="hover:text-blue-600 transition-colors py-1">Contacto</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://chromewebstore.google.com/detail/excel2forms-web-form-auto/akpoionmboejidpnolfehdjfeopmibla?authuser=4&hl=es-419" target="_blank" rel="noopener noreferrer" class="bg-blue-600 hover:bg-blue-700 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition-all" onclick="if(window.va) va('event', { name: 'cta_e2f_header_cws' });">
+                    Añadir a Chrome
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 1. HERO CON KEYWORD PRINCIPAL -->
+        <section class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
+            <div class="inline-flex items-center gap-2 bg-blue-100 text-blue-800 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-6">
+                <span>Extensión oficial para Google Chrome</span>
+                <span class="text-blue-400">•</span>
+                <span>Publicada en Chrome Web Store</span>
+            </div>
+
+            <!-- H1 Principal enfocado en Search Intent -->
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
+                Cómo llenar formularios web desde Excel de forma automática y segura
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                Si necesitas <strong>subir datos de Excel a una web</strong> o autollenar formularios repetitivos fila por fila, <strong>Excel2Forms</strong> se integra en tu navegador Google Chrome para mapear columnas y automatizar los envíos sin escribir una sola línea de código.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://chromewebstore.google.com/detail/excel2forms-web-form-auto/akpoionmboejidpnolfehdjfeopmibla?authuser=4&hl=es-419" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2" onclick="if(window.va) va('event', { name: 'cta_hero_cws_excel2forms' });">
+                    <span>Añadir a Chrome — Pruébalo gratis</span>
+                    <span class="text-xs bg-blue-500 px-2 py-0.5 rounded">Store</span>
+                </a>
+                <a href="#video-demo" class="w-full sm:w-auto bg-white border-2 border-slate-200 hover:border-red-400 text-slate-700 font-semibold text-base md:text-lg px-6 py-3.5 rounded-xl transition-colors text-center flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.5 31.5 0 0 0 24 12a31.5 31.5 0 0 0-.5-5.8zM9.5 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>
+                    <span>Ver video demostración</span>
+                </a>
+            </div>
+
+            <!-- Precios y Acceso -->
+            <div class="mt-8 bg-blue-50 border border-blue-200 rounded-xl p-4 max-w-xl mx-auto text-xs text-blue-900 text-center">
+                <p class="font-semibold mb-1">Acceso gratuito durante la fase de prueba activa • Pruébalo gratis, sin tarjeta de crédito</p>
+                <p class="text-blue-700">Próximamente: plan Pro con más funciones para alto volumen. Los usuarios actuales serán avisados con anticipación.</p>
+            </div>
+        </section>
+
+        <!-- 2. DEMO EN VIDEO EMBEBIDA -->
+        <section id="video-demo" class="max-w-4xl mx-auto px-6 py-12">
+            <div class="text-center mb-6">
+                <span class="text-blue-600 font-semibold text-xs uppercase tracking-wider">Demostración en vivo</span>
+                <h2 class="text-2xl md:text-3xl font-bold text-slate-900 mt-1">Mira cómo funciona en menos de 2 minutos</h2>
+                <p class="text-slate-600 text-sm mt-2">Observa cómo una hoja con múltiples registros se transfiere directamente a los campos del formulario.</p>
+            </div>
+
+            <div class="bg-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-800 aspect-video relative">
+                <iframe 
+                    class="w-full h-full"
+                    src="https://www.youtube.com/embed/5273sAHAIcE" 
+                    title="Demostración de autollenado con Excel2Forms" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- 3. GUÍA PASO A PASO -->
+        <section class="bg-white border-y border-slate-200 py-16">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-blue-600 font-semibold text-xs uppercase tracking-wider">Flujo de trabajo</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1 mb-3">Guía paso a paso: De tu hoja de cálculo al formulario web</h2>
+                    <p class="text-slate-600 text-sm md:text-base">Solo requieres tener el formulario abierto en una pestaña de Chrome y tu archivo listo.</p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Paso 1 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative">
+                        <div class="w-10 h-10 bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center mb-4 text-lg shadow-sm">1</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Carga tu archivo Excel o CSV</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Abre la ventana de la extensión y selecciona tu hoja de cálculo (.xlsx o .csv). Excel2Forms lee al instante los encabezados de tus columnas respetando caracteres especiales y acentos.
+                        </p>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">
+                            Procesamiento 100% en tu memoria
+                        </span>
+                    </div>
+
+                    <!-- Paso 2 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative">
+                        <div class="w-10 h-10 bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center mb-4 text-lg shadow-sm">2</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Detecta y vincula los campos</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Haz clic en el botón <strong>"Detectar Campos"</strong> en la página de destino. La herramienta reconoce casillas de texto, desplegables y opciones. Luego empareja cada columna con su campo correspondiente.
+                        </p>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">
+                            Mapeo visual sin programación
+                        </span>
+                    </div>
+
+                    <!-- Paso 3 -->
+                    <div class="bg-slate-50 p-8 rounded-2xl border border-slate-200 relative">
+                        <div class="w-10 h-10 bg-blue-600 text-white font-bold rounded-xl flex items-center justify-center mb-4 text-lg shadow-sm">3</div>
+                        <h3 class="text-lg font-bold text-slate-900 mb-2">Ejecuta el autollenado y descarga el reporte</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Selecciona si deseas avance automático o confirmación paso a paso. La extensión rellena y envía cada registro. Al culminar, puedes descargar un archivo CSV que certifica los resultados.
+                        </p>
+                        <span class="text-xs font-semibold text-slate-500 bg-white px-2 py-1 rounded border border-slate-200">
+                            Trazabilidad y control total
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. DIFERENCIADOR CLAVE FRENTE A AID -->
+        <section class="max-w-5xl mx-auto px-6 py-16">
+            <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-12 shadow-xl">
+                <div class="max-w-3xl">
+                    <span class="text-blue-400 font-bold text-xs uppercase tracking-wider">Claridad de Solución</span>
+                    <h2 class="text-2xl md:text-3xl font-extrabold mt-1 mb-4">¿Cuándo elegir Excel2Forms frente a AID?</h2>
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                        <strong>Excel2Forms</strong> es la opción indicada cuando trabajas con formularios estándar del día a día (Google Forms, encuestas web, registros de eventos, CRM sencillos o plataformas de inscripción) donde buscas un flujo ágil: cargar la hoja, mapear visualmente en un clic y dejar que el script complete y envíe el lote.
+                    </p>
+                    <p class="text-slate-300 text-sm md:text-base leading-relaxed mb-6">
+                        Si en cambio operas con sistemas cerrados institucionales, portales gubernamentales lentos o trámites donde cada registro exige validación previa humana fila por fila, revisa nuestra herramienta hermana <a href="/aid" class="text-amber-400 underline hover:text-amber-300 font-semibold">AID (Asistente de Ingreso de Datos)</a>.
+                    </p>
+                    <a href="https://chromewebstore.google.com/detail/excel2forms-web-form-auto/akpoionmboejidpnolfehdjfeopmibla?authuser=4&hl=es-419" target="_blank" rel="noopener noreferrer" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm">
+                        Instalar Excel2Forms en Chrome
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. CASOS DE USO REALES -->
+        <section class="max-w-5xl mx-auto px-6 py-12">
+            <div class="text-center mb-12">
+                <span class="text-blue-600 font-semibold text-xs uppercase tracking-wider">Aplicaciones Prácticas</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1 mb-3">¿Para qué tareas se utiliza Excel2Forms?</h2>
+                <p class="text-slate-600 text-sm md:text-base max-w-2xl mx-auto">Elimina la carga de trabajo manual en múltiples sectores profesionales.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <div class="text-3xl mb-3">🎓</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Inscripciones y Registros Escolares</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Carga listados de alumnos desde Excel a formularios de matrícula, encuestas curriculares o sistemas de seguimiento sin tipear cada nombre y carnet.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <div class="text-3xl mb-3">💼</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Administración y Facturación</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Migra listas de proveedores, órdenes de compra o detalles de recibos a portales internos que no ofrecen botón de importación nativo.
+                    </p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl border border-slate-200">
+                    <div class="text-3xl mb-3">📊</div>
+                    <h3 class="font-bold text-slate-900 mb-2">Equipos de Marketing y Ventas</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        Pasa leads y prospectos recolectados en eventos o campañas desde archivos CSV a plataformas web de prospección y formularios de suscripción.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. FAQ DE EXCEL2FORMS -->
+        <section class="max-w-4xl mx-auto px-6 py-16 border-t border-slate-200">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-extrabold text-slate-900 mb-2">Preguntas Frecuentes sobre Excel2Forms</h2>
+                <p class="text-slate-600 text-sm">Todo lo que necesitas saber antes de instalar la extensión.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="bg-white p-6 rounded-2xl border border-slate-200 group" open>
+                    <summary class="font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center text-base">
+                        <span>¿Cómo detecta Excel2Forms las casillas del formulario web?</span>
+                        <span class="text-blue-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        La extensión escanea los elementos de entrada del DOM (inputs de texto, selectores, radio buttons y checkboxes) presentes en la pestaña abierta. Luego te muestra una lista clara para asociar cada columna de tu Excel con el campo deseado.
+                    </p>
+                </details>
+
+                <details class="bg-white p-6 rounded-2xl border border-slate-200 group">
+                    <summary class="font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center text-base">
+                        <span>¿Funciona con formularios de múltiples pasos o páginas?</span>
+                        <summary-icon class="text-blue-600 group-open:rotate-180 transition-transform">▼</summary-icon>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Actualmente está optimizada para formularios web de una sola página o envíos continuos. Para flujos de pasos complejos con validaciones intermedias, se recomienda el modo paso a paso o evaluar nuestra solución complementaria AID.
+                    </p>
+                </details>
+
+                <details class="bg-white p-6 rounded-2xl border border-slate-200 group">
+                    <summary class="font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center text-base">
+                        <span>¿Mis datos están seguros al usar esta extensión?</span>
+                        <summary-icon class="text-blue-600 group-open:rotate-180 transition-transform">▼</summary-icon>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Completamente seguros. La extensión opera bajo el principio de privacidad local estricta: lee el archivo en tu memoria RAM local y lo inyecta directamente en la página web que tienes abierta. Ningún dato viaja a servidores externos.
+                    </p>
+                </details>
+
+                <details class="bg-white p-6 rounded-2xl border border-slate-200 group">
+                    <summary class="font-bold text-slate-800 cursor-pointer list-none flex justify-between items-center text-base">
+                        <span>¿Cuál es el costo de la herramienta?</span>
+                        <summary-icon class="text-blue-600 group-open:rotate-180 transition-transform">▼</summary-icon>
+                    </summary>
+                    <p class="mt-4 text-slate-600 text-sm leading-relaxed">
+                        Puedes instalarla y utilizarla con acceso gratuito durante la fase de prueba. No se requiere tarjeta de crédito. En el futuro lanzaremos un plan Pro con soporte prioritario y automatizaciones avanzadas, manteniendo informados a todos los usuarios.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 7. OTRAS HERRAMIENTAS (INTERNAL LINKING) -->
+        <section class="max-w-5xl mx-auto px-6 py-12 border-t border-slate-200">
+            <h2 class="text-xl font-bold text-slate-900 mb-6 text-center">Otras herramientas de la suite</h2>
+            <div class="max-w-md mx-auto bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-center justify-between">
+                <div>
+                    <span class="text-amber-600 font-bold text-xs uppercase tracking-wider">Próximo lanzamiento</span>
+                    <h3 class="text-lg font-bold text-slate-900">AID (Asistente de Ingreso de Datos)</h3>
+                    <p class="text-xs text-slate-500 mt-1">Automatización controlada con 3 modos de llenado para portales complejos.</p>
+                </div>
+                <a href="/aid" class="bg-amber-500 hover:bg-amber-600 text-white font-semibold text-xs px-4 py-2.5 rounded-lg transition-colors flex-shrink-0 ml-4">
+                    Ver AID →
+                </a>
+            </div>
+        </section>
+
+        <!-- 8. CAPTURA DE CORREOS / CONTACTO -->
+        <section id="contacto" class="max-w-3xl mx-auto px-6 py-16 border-t border-slate-200 text-center">
+            <h2 class="text-2xl font-bold text-slate-900 mb-2">Recibe avisos cuando salgan nuevas funciones y el plan Pro</h2>
+            <p class="text-slate-600 text-sm mb-8">Déjanos tu correo o contáctanos directamente para consultas sobre Excel2Forms.</p>
+            
+            <div class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-y-auto mb-8 no-scrollbar" style="height:500px">
+                <iframe src="https://tally.so/r/xXeD5E?hideTitle=1" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0" title="Contacto Excel2Forms" style="margin-top:-120px;border:0"></iframe>
+            </div>
+
+            <a href="https://wa.me/50586443987?text=Hola%2C%20tengo%20una%20consulta%20sobre%20Excel2Forms" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 bg-[#25D366] hover:bg-[#1da851] text-white font-semibold px-6 py-3 rounded-xl transition-colors text-sm" onclick="if(window.va) va('event', { name: 'e2f_click_whatsapp' });">
+                <span>Escríbenos por WhatsApp sobre Excel2Forms</span>
+            </a>
+        </section>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="bg-white border-t border-slate-200 py-12 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 font-bold text-slate-800 mb-3">
+                        <span class="text-blue-600">⚡</span> Johnny Q | Tech Tools
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                        Herramientas orientadas a resolver la digitación repetitiva de datos con privacidad local in-browser.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Herramientas</h4>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="/excel2forms" class="text-blue-600 font-semibold">Excel2Forms (Extensión Chrome)</a></li>
+                        <li><a href="/aid" class="hover:text-blue-600 transition-colors">AID (Ingreso de Datos Offline)</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Legal y Soporte</h4>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="/privacidad" class="hover:text-blue-600 transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/terminos" class="hover:text-blue-600 transition-colors">Términos de Uso</a></li>
+                        <li><a href="https://wa.me/50586443987" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">WhatsApp</a></li>
+                        <li><a href="https://www.youtube.com/@johnnyqtechtools" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors">YouTube</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Otros proyectos</h4>
+                    <ul class="text-xs space-y-2">
+                        <li>
+                            <a href="https://videofrases.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 transition-colors inline-flex items-center gap-1">
+                                <span>VideoFrases (Aprende inglés con IA)</span>
+                                <span class="text-[10px]">↗</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>© 2026 Johnny Q | Tech Tools. Todos los derechos reservados.</p>
+                <p>Chrome™ es una marca registrada de Google LLC.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
