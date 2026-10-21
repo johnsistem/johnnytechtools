@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyes de Nicaragua — Códigos Legales y Calculadoras Gratuitas | Johnny Q Tech Tools</title>
+    <meta name="description" content="Plataforma de consulta digital gratuita de leyes y códigos de Nicaragua con calculadoras de Aguinaldo (Ley 185), Liquidación laboral (Art. 45) y Facturación DGI con retenciones e IVA.">
+    <link rel="canonical" href="https://johnnytechtools.vercel.app/leyes">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://johnnytechtools.vercel.app/leyes">
+    <meta property="og:title" content="Leyes de Nicaragua — Códigos Legales y Calculadoras Gratuitas">
+    <meta property="og:description" content="Consulta rápida de Códigos de Trabajo, Familia, Penal, Civil y Constitución, más calculadoras laborales y tributarias para Nicaragua.">
+    <meta property="og:image" content="https://johnnytechtools.vercel.app/assets/screenshot-home-leyes.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://johnnytechtools.vercel.app/leyes">
+    <meta name="twitter:title" content="Leyes de Nicaragua — Códigos Legales y Calculadoras Gratuitas">
+    <meta name="twitter:description" content="Consulta rápida de Códigos de Trabajo, Familia, Penal, Civil y Constitución con calculadoras para Nicaragua.">
+    <meta name="twitter:image" content="https://johnnytechtools.vercel.app/assets/screenshot-home-leyes.png">
+
+    <!-- Schema JSON-LD WebApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Leyes de Nicaragua",
+      "applicationCategory": "ReferenceApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Portal web de acceso público y gratuito a los códigos legales de Nicaragua con calculadoras laborales de Aguinaldo, Liquidación e impuestos DGI.",
+      "url": "https://leyesdenicaragua.com/"
+    }
+    </script>
+
+    <!-- Schema FAQPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "¿Qué calculadoras gratuitas ofrece Leyes de Nicaragua?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Incluye la Calculadora de Aguinaldo (según Arts. 93 y 94 de la Ley 185), la Calculadora de Liquidación laboral por despido o renuncia (indemnización por antigüedad Art. 45, vacaciones y aguinaldo proporcional) y la Calculadora de Facturas DGI (desglose de IVA 15%, retenciones IR 2%, 10%, 12% e IMI 1%)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿El uso de la plataforma y sus calculadoras tiene algún costo?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No, es 100% gratuita y de acceso libre desde cualquier navegador o teléfono celular sin requerir registro ni instalación."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "¿Qué códigos de leyes están disponibles para consultar?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Contiene el Código del Trabajo (Ley 185), Código de Familia (Ley 870), Constitución Política de Nicaragua, Código Penal (Ley 641) y Código Civil (Ley 340), sumando más de 5,100 artículos indexados con buscador instantáneo."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/styles.css">
+
+    <!-- Vercel Web Analytics & Speed Insights -->
+    <script>
+      window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script>
+      window.si = window.si || function () { (window.siq = window.siq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/speed-insights/script.js"></script>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans antialiased flex flex-col min-h-screen">
+
+    <!-- HEADER GLOBAL -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+            <a href="/" class="flex items-center gap-2 font-extrabold text-xl tracking-tight text-slate-800 hover:text-emerald-600 transition-colors">
+                <span class="text-blue-600 text-2xl">⚡</span>
+                <span>Johnny Q <span class="text-blue-600">|</span> Tech Tools</span>
+            </a>
+            
+            <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-600" aria-label="Navegación principal">
+                <a href="/" class="hover:text-blue-600 transition-colors py-1">Inicio</a>
+                <a href="/excel2forms" class="hover:text-blue-600 transition-colors py-1">Excel2Forms</a>
+                <a href="/aid" class="hover:text-blue-600 transition-colors py-1">AID</a>
+                <a href="/leyes" class="text-emerald-600 border-b-2 border-emerald-600 py-1" aria-current="page">Leyes de Nicaragua</a>
+                <a href="/#contacto" class="hover:text-blue-600 transition-colors py-1">Contacto</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs md:text-sm font-semibold px-4 py-2 rounded-lg shadow-sm transition-all flex items-center gap-1.5" onclick="if(window.va) va('event', { name: 'cta_header_leyes' });">
+                    <span>Visitar Web</span>
+                    <span class="text-xs">↗</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <!-- 1. HERO -->
+        <section class="max-w-5xl mx-auto px-6 pt-16 pb-12 text-center">
+            <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 text-xs md:text-sm font-bold px-4 py-1.5 rounded-full mb-6">
+                <span>⚖️ Proyecto Web Oficial de Acceso Libre</span>
+                <span class="text-emerald-400">•</span>
+                <span>leyesdenicaragua.com</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-slate-900 mb-6 leading-tight max-w-4xl mx-auto">
+                Leyes de Nicaragua: Códigos Legales y Calculadoras Interactivas Gratuitas
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto mb-8 leading-relaxed">
+                Una plataforma web moderna, rápida y optimizada para móviles que pone al alcance de trabajadores, contadores, abogados y estudiantes más de <strong>5,100 artículos legales</strong> y herramientas de cálculo laboral y tributario conforme a la normativa nicaragüense.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base md:text-lg px-8 py-4 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 text-center flex items-center justify-center gap-2" onclick="if(window.va) va('event', { name: 'cta_hero_leyes_directo' });">
+                    <span>Explorar LeyesdeNicaragua.com ↗</span>
+                </a>
+                <a href="#calculadoras" class="w-full sm:w-auto bg-white border-2 border-slate-200 hover:border-emerald-500 text-slate-700 font-semibold text-base md:text-lg px-6 py-3.5 rounded-xl transition-colors text-center flex items-center justify-center gap-2">
+                    <span>Ver Calculadoras y Capturas ↓</span>
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto">
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl md:text-3xl font-extrabold text-emerald-600">5,118+</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Artículos Indexados</div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl md:text-3xl font-extrabold text-blue-600">5</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Códigos Legales</div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl md:text-3xl font-extrabold text-amber-600">3</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Calculadoras Online</div>
+                </div>
+                <div class="bg-white p-4 rounded-2xl border border-slate-200 shadow-sm">
+                    <div class="text-2xl md:text-3xl font-extrabold text-slate-800">100%</div>
+                    <div class="text-xs text-slate-500 font-medium mt-1">Acceso Gratuito</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. VISTA GENERAL DE LA PLATAFORMA -->
+        <section class="max-w-5xl mx-auto px-6 py-8">
+            <div class="bg-white p-4 md:p-6 rounded-3xl border border-slate-200 shadow-md">
+                <div class="flex items-center justify-between mb-4 px-2">
+                    <div>
+                        <span class="text-xs font-bold uppercase tracking-wider text-emerald-600">Portada de la Plataforma</span>
+                        <h2 class="text-xl md:text-2xl font-bold text-slate-900 mt-0.5">Buscador y Códigos Disponibles</h2>
+                    </div>
+                    <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-1 text-xs font-semibold text-emerald-600 hover:text-emerald-700">
+                        <span>Visitar sitio en vivo</span>
+                        <span>↗</span>
+                    </a>
+                </div>
+                <img 
+                    src="/assets/screenshot-home-leyes.png" 
+                    alt="Captura de la página principal de Leyes de Nicaragua con buscador de artículos y listado de códigos" 
+                    width="1280" 
+                    height="800" 
+                    class="w-full h-auto rounded-2xl border border-slate-100 object-cover shadow-inner"
+                    loading="lazy">
+                <p class="text-xs text-slate-500 text-center mt-3">
+                    Vista del home en <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="text-emerald-600 hover:underline">leyesdenicaragua.com</a> con motor de búsqueda instantáneo por número de artículo y palabras clave.
+                </p>
+            </div>
+        </section>
+
+        <!-- 3. SECCIÓN CALCULADORAS CON CAPTURAS REALES -->
+        <section id="calculadoras" class="max-w-6xl mx-auto px-6 py-16">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="text-emerald-600 font-semibold text-xs uppercase tracking-wider">Herramientas en Vivo</span>
+                <h2 class="text-3xl font-extrabold text-slate-900 mt-1 mb-3">
+                    Calculadoras Especializadas de Nicaragua
+                </h2>
+                <p class="text-slate-600 text-sm md:text-base">
+                    Diseñadas para simplificar los cálculos más comunes del día a día laboral y contable en el país, con fórmulas oficiales y desglose transparente.
+                </p>
+            </div>
+
+            <div class="space-y-16">
+                <!-- Calculadora 1: Aguinaldo -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden grid lg:grid-cols-12 items-center">
+                    <div class="lg:col-span-6 p-8 md:p-10 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="inline-flex items-center gap-2 bg-red-50 text-red-700 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-red-200">
+                                <span>🎄 Décimo Tercer Mes</span>
+                                <span>•</span>
+                                <span>Arts. 93 y 94 (Ley 185)</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                                Calculadora de Aguinaldo
+                            </h3>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                                Calcula el monto exacto de tu décimo tercer mes en Nicaragua. Contempla tanto salario ordinario fijo como salario variable (comisiones, destajo, incentivos) tomando el promedio de los últimos 6 meses, con cálculo proporcional por meses y días laborados.
+                            </p>
+
+                            <div class="border-t border-slate-100 pt-4 mb-6">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Características:</h4>
+                                <ul class="text-sm text-slate-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Cálculo automático de días y meses proporcionales entre fechas.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Soporte para salarios variables con tabla de los últimos 6 meses.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Exención total de impuestos y deducciones según el Código del Trabajo.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="https://leyesdenicaragua.com/calculadoras/aguinaldo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-sm text-sm" onclick="if(window.va) va('event', { name: 'click_calc_aguinaldo' });">
+                                <span>Abrir Calculadora de Aguinaldo</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-slate-900 p-4 md:p-6 flex items-center justify-center">
+                        <div class="w-full rounded-2xl overflow-hidden border border-slate-700 shadow-xl group relative">
+                            <img 
+                                src="/assets/screenshot-aguinaldo.png" 
+                                alt="Captura de la Calculadora de Aguinaldo de Leyes de Nicaragua" 
+                                width="1280" 
+                                height="800" 
+                                class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculadora 2: Liquidación -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden grid lg:grid-cols-12 items-center">
+                    <div class="lg:col-span-6 lg:order-2 p-8 md:p-10 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-blue-200">
+                                <span>🧮 Finiquito Laboral</span>
+                                <span>•</span>
+                                <span>Art. 45 y Art. 76 (Ley 185)</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                                Calculadora de Liquidación Laboral
+                            </h3>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                                Estima la indemnización por años de servicio continuo según la escala oficial (1 mes por cada uno de los primeros 3 años, y 20 días por año adicional hasta el tope de 5 meses de salario), además de vacaciones pendientes y aguinaldo acumulado.
+                            </p>
+
+                            <div class="border-t border-slate-100 pt-4 mb-6">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Características:</h4>
+                                <ul class="text-sm text-slate-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Distingue entre despido sin causa justa (aplica Art. 45) o renuncia voluntaria.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Cálculo de compensación de vacaciones no gozadas (Art. 76).
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Desglose completo de liquidación bruta y neta estimada.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="https://leyesdenicaragua.com/calculadoras/liquidacion-nicaragua" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-sm text-sm" onclick="if(window.va) va('event', { name: 'click_calc_liquidacion' });">
+                                <span>Abrir Calculadora de Liquidación</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 lg:order-1 bg-slate-900 p-4 md:p-6 flex items-center justify-center">
+                        <div class="w-full rounded-2xl overflow-hidden border border-slate-700 shadow-xl group relative">
+                            <img 
+                                src="/assets/screenshot-liquidacion.png" 
+                                alt="Captura de la Calculadora de Liquidación de Leyes de Nicaragua" 
+                                width="1280" 
+                                height="800" 
+                                class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Calculadora 3: DGI e IVA -->
+                <div class="bg-white rounded-3xl border border-slate-200 shadow-md overflow-hidden grid lg:grid-cols-12 items-center">
+                    <div class="lg:col-span-6 p-8 md:p-10 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="inline-flex items-center gap-2 bg-indigo-50 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-indigo-200">
+                                <span>🧾 Régimen Fiscal</span>
+                                <span>•</span>
+                                <span>Ley 822 y Ley 987</span>
+                            </div>
+                            <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3">
+                                Calculadora DGI, IVA y Retenciones IR
+                            </h3>
+                            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-6">
+                                Diseñada para profesionales independientes, consultores y empresas que emiten comprobantes fiscales en Nicaragua. Permite obtener el desglose exacto en modo directo (a partir del subtotal) o inverso (cuánto facturar para recibir un monto neto en mano).
+                            </p>
+
+                            <div class="border-t border-slate-100 pt-4 mb-6">
+                                <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Características:</h4>
+                                <ul class="text-sm text-slate-700 space-y-2">
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Cálculo del IVA general (15%) o exento.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Retenciones en la fuente IR: 2% bienes, 10% servicios profesionales y 12% alquileres.
+                                    </li>
+                                    <li class="flex items-start gap-2">
+                                        <span class="text-emerald-500 font-bold">✓</span> Retención municipal IMI (1% Alcaldía) configurable.
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div>
+                            <a href="https://leyesdenicaragua.com/calculadoras/dgi-facturas-nicaragua" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-indigo-600 hover:bg-indigo-700 text-white font-semibold px-6 py-3 rounded-xl transition-colors shadow-sm text-sm" onclick="if(window.va) va('event', { name: 'click_calc_dgi' });">
+                                <span>Abrir Calculadora DGI e IVA</span>
+                                <span>↗</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-6 bg-slate-900 p-4 md:p-6 flex items-center justify-center">
+                        <div class="w-full rounded-2xl overflow-hidden border border-slate-700 shadow-xl group relative">
+                            <img 
+                                src="/assets/screenshot-dgi.png" 
+                                alt="Captura de la Calculadora DGI e IVA con retenciones de Leyes de Nicaragua" 
+                                width="1280" 
+                                height="800" 
+                                class="w-full h-auto object-cover transform group-hover:scale-[1.02] transition-transform duration-300"
+                                loading="lazy">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. CÓDIGOS LEGALES DISPONIBLES -->
+        <section class="bg-white border-y border-slate-200 py-16">
+            <div class="max-w-5xl mx-auto px-6">
+                <div class="text-center max-w-2xl mx-auto mb-12">
+                    <span class="text-emerald-600 font-semibold text-xs uppercase tracking-wider">Cuerpo Jurídico</span>
+                    <h2 class="text-3xl font-extrabold text-slate-900 mt-1 mb-3">Códigos Legales Consultables</h2>
+                    <p class="text-slate-600 text-sm md:text-base">Textos completos estructurados por títulos, capítulos y artículos con lectura rápida.</p>
+                </div>
+
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-500 transition-colors">
+                        <div class="text-3xl mb-2">💼</div>
+                        <h4 class="font-bold text-slate-900 mb-1">Código del Trabajo</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mb-2">Ley 185 • 406 artículos</p>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Contratos laborales, descansos, salarios, derechos sindicales, riesgos laborales y régimen disciplinario.</p>
+                        <a href="https://leyesdenicaragua.com/codigos/trabajo" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">Ver artículos →</a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-500 transition-colors">
+                        <div class="text-3xl mb-2">👨‍👩‍👧‍👦</div>
+                        <h4 class="font-bold text-slate-900 mb-1">Código de Familia</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mb-2">Ley 870 • 673 artículos</p>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Matrimonio, unión de hecho estable, pensión alimenticia, régimen de tutela, adopción y patria potestad.</p>
+                        <a href="https://leyesdenicaragua.com/codigos/familia" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">Ver artículos →</a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-500 transition-colors">
+                        <div class="text-3xl mb-2">🏛️</div>
+                        <h4 class="font-bold text-slate-900 mb-1">Constitución Política</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mb-2">Carta Magna • 183 artículos</p>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Principios fundamentales del Estado, derechos individuales, garantías procesales y poderes del Estado.</p>
+                        <a href="https://leyesdenicaragua.com/codigos/politica" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">Ver artículos →</a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-500 transition-colors">
+                        <div class="text-3xl mb-2">⚖️</div>
+                        <h4 class="font-bold text-slate-900 mb-1">Código Penal</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mb-2">Ley 641 • 574 artículos</p>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Tipificación de delitos y faltas, penas aplicables, circunstancias atenuantes/agravantes y responsabilidad civil.</p>
+                        <a href="https://leyesdenicaragua.com/codigos/penal" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">Ver artículos →</a>
+                    </div>
+
+                    <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200 hover:border-emerald-500 transition-colors">
+                        <div class="text-3xl mb-2">📜</div>
+                        <h4 class="font-bold text-slate-900 mb-1">Código Civil</h4>
+                        <p class="text-xs text-emerald-600 font-semibold mb-2">Ley 340 • 3,285 artículos</p>
+                        <p class="text-xs text-slate-600 leading-relaxed mb-4">Derecho de las personas, bienes y propiedad, sucesiones por causa de muerte, obligaciones y contratos.</p>
+                        <a href="https://leyesdenicaragua.com/codigos/civil" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-emerald-600 hover:text-emerald-700">Ver artículos →</a>
+                    </div>
+
+                    <div class="p-6 bg-emerald-50 rounded-2xl border border-emerald-200 flex flex-col justify-between">
+                        <div>
+                            <div class="text-3xl mb-2">🔍</div>
+                            <h4 class="font-bold text-emerald-950 mb-1">Buscador Universal</h4>
+                            <p class="text-xs text-emerald-700 font-semibold mb-2">Indexación en vivo</p>
+                            <p class="text-xs text-emerald-800 leading-relaxed mb-4">Escribe "artículo 45" o palabras clave de cualquier tema y encuentra la norma en segundos sin descargar PDFs pesados.</p>
+                        </div>
+                        <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold py-2.5 px-4 rounded-xl text-center transition-colors">Ir al Buscador ↗</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. PREGUNTAS FRECUENTES -->
+        <section class="max-w-4xl mx-auto px-6 py-16">
+            <div class="text-center mb-12">
+                <span class="text-emerald-600 font-semibold text-xs uppercase tracking-wider">Dudas habituales</span>
+                <h2 class="text-2xl md:text-3xl font-extrabold text-slate-900 mt-1 mb-2">Preguntas frecuentes sobre Leyes de Nicaragua</h2>
+                <p class="text-slate-600 text-sm">Todo lo que necesitas saber sobre la plataforma y las calculadoras.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="bg-white rounded-2xl border border-slate-200 p-6 group" open>
+                    <summary class="font-bold text-slate-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
+                        <span>¿De dónde provienen los textos de las leyes?</span>
+                        <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                        Los textos son recopilados de fuentes públicas y oficiales (como el Digesto Jurídico Nicaragüense, publicaciones de la Asamblea Nacional y La Gaceta, Diario Oficial). El sitio es una iniciativa privada informativa de acceso libre orientada a facilitar la lectura y consulta moderna sin fines de asesoría jurídica vinculante.
+                    </p>
+                </details>
+
+                <details class="bg-white rounded-2xl border border-slate-200 p-6 group">
+                    <summary class="font-bold text-slate-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
+                        <span>¿Las calculadoras guardan mis datos o salarios?</span>
+                        <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                        No. Al igual que el resto de herramientas de Johnny Q | Tech Tools, las calculadoras operan mediante scripts ejecutados directamente en tu navegador. Tus números de salario, fechas y cálculos no se registran en bases de datos externas.
+                    </p>
+                </details>
+
+                <details class="bg-white rounded-2xl border border-slate-200 p-6 group">
+                    <summary class="font-bold text-slate-900 cursor-pointer list-none flex justify-between items-center text-sm md:text-base">
+                        <span>¿Puedo acceder desde el celular?</span>
+                        <span class="text-emerald-600 group-open:rotate-180 transition-transform">▼</span>
+                    </summary>
+                    <p class="text-slate-600 text-sm mt-4 leading-relaxed">
+                        Sí, la web está 100% optimizada para dispositivos móviles (responsive), lo que permite consultar artículos o realizar cálculos rápidos en cualquier momento desde el teléfono.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+        <!-- 6. CTA FINAL -->
+        <section class="bg-emerald-900 text-white py-16">
+            <div class="max-w-4xl mx-auto px-6 text-center">
+                <div class="text-5xl mb-4">⚖️</div>
+                <h2 class="text-2xl md:text-4xl font-extrabold mb-4">
+                    Comienza a consultar y calcular gratis ahora
+                </h2>
+                <p class="text-emerald-100 text-sm md:text-base max-w-2xl mx-auto mb-8 leading-relaxed">
+                    Accede a leyesdenicaragua.com sin necesidad de registrarte ni pagar suscripciones.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto bg-white text-emerald-900 hover:bg-emerald-50 font-bold px-8 py-4 rounded-xl shadow-lg transition-all text-sm md:text-base" onclick="if(window.va) va('event', { name: 'cta_bottom_leyes' });">
+                        Abrir leyesdenicaragua.com ↗
+                    </a>
+                    <a href="/" class="w-full sm:w-auto bg-emerald-800 hover:bg-emerald-700 text-white font-medium px-6 py-3.5 rounded-xl transition-colors text-sm border border-emerald-700">
+                        Ver todas las herramientas del catálogo
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER GLOBAL -->
+    <footer class="bg-white border-t border-slate-200 py-12 text-sm text-slate-500">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 font-bold text-slate-800 mb-3">
+                        <span class="text-blue-600">⚡</span> Johnny Q | Tech Tools
+                    </div>
+                    <p class="text-xs text-slate-500 leading-relaxed mb-4">
+                        Herramientas y extensiones enfocadas en la productividad, automatización web y utilidades digitales con máxima privacidad.
+                    </p>
+                    <p class="text-xs text-slate-400">
+                        Managua, Nicaragua • Alcance Global
+                    </p>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Herramientas</h4>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="/excel2forms" class="hover:text-blue-600 transition-colors">Excel2Forms (Extensión Chrome)</a></li>
+                        <li><a href="/aid" class="hover:text-blue-600 transition-colors">AID (Ingreso de Datos)</a></li>
+                        <li><a href="/leyes" class="text-emerald-600 font-semibold hover:underline">Leyes de Nicaragua</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Legal y Soporte</h4>
+                    <ul class="text-xs space-y-2">
+                        <li><a href="/privacidad" class="hover:text-blue-600 transition-colors">Política de Privacidad</a></li>
+                        <li><a href="/terminos" class="hover:text-blue-600 transition-colors">Términos de Uso</a></li>
+                        <li><a href="https://wa.me/50586443987" target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors">Soporte por WhatsApp</a></li>
+                        <li><a href="https://www.youtube.com/@johnnyqtechtools" target="_blank" rel="noopener noreferrer" class="hover:text-red-500 transition-colors">Canal de YouTube</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Otros proyectos</h4>
+                    <ul class="text-xs space-y-2">
+                        <li>
+                            <a href="https://videofrases.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 transition-colors inline-flex items-center gap-1">
+                                <span>VideoFrases (Aprende inglés con IA)</span>
+                                <span class="text-[10px]">↗</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-slate-100 pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 gap-4">
+                <p>© 2026 Johnny Q | Tech Tools. Todos los derechos reservados.</p>
+                <p>Las referencias legales pertenecen al marco jurídico de la República de Nicaragua.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

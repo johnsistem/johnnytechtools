@@ -6,6 +6,7 @@
     { "source": "/excel2forms.html", "destination": "/excel2forms", "permanent": true },
     { "source": "/aid.html", "destination": "/aid", "permanent": true },
     { "source": "/privacidad.html", "destination": "/privacidad", "permanent": true },
-    { "source": "/terminos.html", "destination": "/terminos", "permanent": true }
+    { "source": "/terminos.html", "destination": "/terminos", "permanent": true },
+    { "source": "/leyes.html", "destination": "/leyes", "permanent": true }
   ]
 }
