@@ -51,6 +51,13 @@
           "applicationCategory": "BrowserApplication",
           "operatingSystem": "Chrome",
           "description": "Automatización paso a paso para carga masiva de datos en portales web complejos con 3 modos de ejecución y privacidad local."
+        },
+        {
+          "@type": "WebApplication",
+          "name": "Leyes de Nicaragua",
+          "applicationCategory": "ReferenceApplication",
+          "url": "https://leyesdenicaragua.com/",
+          "description": "Portal web gratuito con códigos legales de Nicaragua, buscadores rápidos y calculadoras laborales y tributarias (Aguinaldo, Liquidación, Facturación DGI)."
         }
       ]
     }
@@ -239,7 +246,7 @@
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-8 items-stretch">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
                 <!-- Tarjeta Excel2Forms -->
                 <article class="bg-white p-8 rounded-2xl shadow-md border-2 border-blue-500 hover:shadow-xl transition-all relative flex flex-col justify-between">
                     <div>
@@ -295,7 +302,7 @@
                             </span>
                         </div>
                         <div class="text-4xl mb-3">🤖</div>
-                        <h3 class="text-2xl font-bold text-slate-900 mb-2">AID (Asistente de Ingreso de Datos)</h3>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">AID (Asistente)</h3>
                         <p class="text-slate-600 text-sm mb-6 leading-relaxed">
                             Automatización asistida pensada para sistemas gubernamentales, portales hospitalarios o plataformas académicas complejas que requieren supervisión registro a registro.
                         </p>
@@ -322,6 +329,49 @@
                         </a>
                         <a href="#contacto" class="block w-full bg-amber-600 hover:bg-amber-700 text-white font-medium py-2.5 rounded-xl transition-colors text-center text-sm" onclick="if(window.va) va('event', { name: 'hub_click_aid_waitlist' });">
                             Avísame cuando esté disponible en Chrome
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Tarjeta Leyes de Nicaragua -->
+                <article class="bg-white p-8 rounded-2xl shadow-md border-2 border-emerald-500 hover:shadow-xl transition-all relative flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="bg-emerald-600 text-white text-xs font-bold px-3 py-1 rounded-full">
+                                Web App Gratis
+                            </span>
+                            <span class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-1 rounded">
+                                En vivo
+                            </span>
+                        </div>
+                        <div class="text-4xl mb-3">⚖️</div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-2">Leyes de Nicaragua</h3>
+                        <p class="text-slate-600 text-sm mb-6 leading-relaxed">
+                            Plataforma de consulta digital gratuita de códigos legales nicaragüenses (Trabajo, Familia, Penal, Civil, Constitución) con calculadoras laborales y tributarias integradas.
+                        </p>
+
+                        <div class="border-t border-slate-100 pt-4 mb-6">
+                            <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">Lo mejor para:</h4>
+                            <ul class="text-sm text-slate-700 space-y-2">
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">✓</span> Búsqueda rápida e indexada de más de 5,100 artículos legales.
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">✓</span> Calculadoras de Aguinaldo (Ley 185) y Liquidación laboral (Art. 45).
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="text-green-500">✓</span> Calculadora de facturación DGI con retenciones e IVA.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-100 flex flex-col gap-3">
+                        <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white font-semibold py-3 rounded-xl transition-colors text-center shadow-sm" onclick="if(window.va) va('event', { name: 'hub_click_leyes_btn' });">
+                            Abrir leyesdenicaragua.com ↗
+                        </a>
+                        <a href="https://leyesdenicaragua.com/calculadoras/aguinaldo" target="_blank" rel="noopener noreferrer" class="block w-full bg-slate-100 hover:bg-slate-200 text-slate-800 font-medium py-2.5 rounded-xl transition-colors text-center text-sm">
+                            Probar Calculadora de Aguinaldo
                         </a>
                     </div>
                 </article>
@@ -480,6 +530,12 @@
                 <div>
                     <h4 class="text-xs font-bold uppercase tracking-wider text-slate-800 mb-3">Otros proyectos</h4>
                     <ul class="text-xs space-y-2">
+                        <li>
+                            <a href="https://leyesdenicaragua.com/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 transition-colors inline-flex items-center gap-1 font-medium">
+                                <span>⚖️ Leyes de Nicaragua (Códigos & Calculadoras)</span>
+                                <span class="text-[10px]">↗</span>
+                            </a>
+                        </li>
                         <li>
                             <a href="https://videofrases.onrender.com/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-blue-600 transition-colors inline-flex items-center gap-1">
                                 <span>VideoFrases (Aprende inglés con IA)</span>
